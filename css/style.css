@@ -1,0 +1,320 @@
+nav {
+  position: fixed;
+  height: 6vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: white;
+  background-color: white;
+}
+
+nav #cover {
+  position: absolute;
+  width: 100%;
+  height: 5vh;
+  z-index: 1;
+  background-color: white;
+}
+
+nav ul {
+  background-color: white;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  top: -42vh;
+  -webkit-transition: .5s;
+  transition: .5s;
+  color: #4d9ecd;
+}
+
+nav ul.active {
+  top: 5vh;
+}
+
+nav ul.active li:nth-of-type(1) {
+  border-top: 1px #4d9ecd solid;
+}
+
+nav ul.active li {
+  display: block;
+  border-bottom: 1px #4d9ecd solid;
+  -ms-flex-preferred-size: 8vh;
+      flex-basis: 8vh;
+  line-height: 8vh;
+}
+
+nav ul.active li:active {
+  background-color: #4d9ecd;
+  color: white;
+}
+
+nav .burger {
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  width: 7%;
+  height: 40%;
+  z-index: 2;
+}
+
+nav .burger div {
+  position: absolute;
+  background-color: #4d9ecd;
+  width: 100%;
+  height: 15%;
+  -webkit-transition: top .2s, opacity .2s, -webkit-transform .2s;
+  transition: top .2s, opacity .2s, -webkit-transform .2s;
+  transition: top .2s, opacity .2s, transform .2s;
+  transition: top .2s, opacity .2s, transform .2s, -webkit-transform .2s;
+}
+
+nav .burger .top {
+  top: 0;
+}
+
+nav .burger .middle {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+nav .burger .bottom {
+  bottom: 0;
+}
+
+nav .burger.active .top {
+  top: calc(50%);
+  -webkit-transform: translate(0, -50%) rotate(-45deg);
+          transform: translate(0, -50%) rotate(-45deg);
+}
+
+nav .burger.active .middle {
+  opacity: 0;
+}
+
+nav .burger.active .bottom {
+  top: calc(50%);
+  -webkit-transform: translate(0, -50%) rotate(45deg);
+          transform: translate(0, -50%) rotate(45deg);
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/HEADER.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 40%;
+  background-attachment: fixed;
+  z-index: -2;
+}
+
+header .description {
+  position: fixed;
+  left: 5%;
+  top: 50%;
+}
+
+header .description h1, header .description h2, header .description h3 {
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 0 1px #1F1F1F;
+  font-size: 3em;
+  font-weight: 600;
+}
+
+header .description h1:nth-of-type(1) {
+  font-size: 5em;
+}
+
+header .description h2 {
+  margin-top: 5%;
+  font-size: 3em;
+  padding: 9% 0 13%;
+}
+
+header .description h3 {
+  font-size: 2em;
+}
+
+main {
+  z-index: 1;
+  color: #1F1F1F;
+  background-color: white;
+  padding: 5vh 0 0;
+}
+
+main .title {
+  font-size: 4em;
+  text-align: center;
+  z-index: 0;
+  line-height: 8vh;
+  background-image: -webkit-gradient(linear, right top, left top, from(#9edff5), to(#d8608d));
+  background-image: linear-gradient(-90deg, #9edff5, #d8608d);
+  opacity: .5;
+  width: 85%;
+  margin: 0 auto 3vh;
+  border-radius: 10px;
+  color: black;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+main p {
+  font-size: 2em;
+  text-align: justify;
+  text-align-last: center;
+  font-size: 2em;
+  padding: 2vh 3vh 2vh;
+}
+
+main .s1 {
+  padding: 2vh 0 5vh;
+}
+
+main .s1 .slash {
+  position: absolute;
+  width: 85%;
+  background-color: #1F1F1F;
+  height: 1px;
+}
+
+main .s1 .slash:nth-of-type(even) {
+  right: 0%;
+}
+
+main .s2 {
+  padding: 5vh 0 5vh;
+  background-color: #f2f2f2;
+}
+
+main .s2 .usluga {
+  margin: 0 0 5vh;
+}
+
+main .s2 .usluga:last-of-type {
+  margin: 0;
+}
+
+main .s2 .usluga h1 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 400;
+  color: #1F1F1F;
+}
+
+main .s2 .usluga h1 i {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+main .s2 .usluga h1 i.active {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+main .s2 .usluga p {
+  display: none;
+  border-bottom: 1px solid #1F1F1F;
+}
+
+main .s2 .usluga p.active {
+  display: block;
+}
+
+main .s3 {
+  padding: 5vh 0 5vh;
+}
+
+main .s3 img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+main .s4 {
+  padding: 5vh 0 0 0;
+  background-color: #303030;
+  color: white;
+  text-transform: uppercase;
+}
+
+main .s4 i {
+  font-size: 1.8em;
+  padding-right: 10px;
+}
+
+main .s4 .title {
+  opacity: .9;
+}
+
+main .s4 a {
+  text-decoration: none;
+  color: white;
+}
+
+main .s4 a .mapouter {
+  position: relative;
+  text-align: right;
+  height: 360px;
+  width: 100%;
+}
+
+main .s4 a .mapouter .gmap_canvas {
+  overflow: hidden;
+  background: none;
+  height: 360px;
+  width: 100%;
+}
+
+main .s4 p {
+  padding: 2%;
+  font-size: 2em;
+}
+
+main .s4 p:nth-last-of-type(2) i, main .s4 p:nth-last-of-type(1) i {
+  vertical-align: -5px;
+}
+
+main .s4 .mail {
+  font-size: 1.5em;
+  padding: 0 0 5vh;
+}
+
+footer {
+  background-color: #303030;
+}
+
+footer p {
+  font-size: 1em;
+  text-align: justify;
+  text-align-last: center;
+  padding: 2vh 3vh;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  font-size: 10px;
+  font-family: 'Raleway', sans-serif;
+}
+/*# sourceMappingURL=style.css.map */
